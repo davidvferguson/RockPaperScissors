@@ -9,6 +9,7 @@ let computerScore = 0
 
 //play 5 rounds
 function game(){
+    console.log("game function started")
     for (let i=0; i < 5; i++){
         playRound();
         console.log(roundResult);
@@ -27,6 +28,7 @@ const computerSelection = getComputerChoice();
 
 // 1 round of game
 function playRound(playerSelection, computerSelection){
+    console.log("playRound function started")
     let roundResult = "";
     if (playerSelection === computerSelection){
     roundResult = "Tie!";
@@ -46,6 +48,7 @@ function playRound(playerSelection, computerSelection){
 
 // function for computer choice
 function getComputerChoice(){
+    console.log("getComputerChoice function started")
     const computerChoice = ["rock", "paper", "scissors"];
     let choice = Math.floor(Math.random() * computerChoice.length);
     return computerChoice[choice];
@@ -54,6 +57,7 @@ function getComputerChoice(){
 
 // function for player choice
 function getPlayerChoice(){
+    console.log("getPlayerChoice function started")
     let input = prompt("Enter 'Rock', 'Paper', or 'Scissors'");
     let playerChoice = input.toLowerCase();
     return playerChoice;
