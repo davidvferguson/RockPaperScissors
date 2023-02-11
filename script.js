@@ -18,10 +18,10 @@ function game(){
       //  console.log(playRound());
     }
     if (playerScore > computerScore){
-        console.log("You Win! " + playerScore + " - " + computerScore)
+        console.log("You Won the Game! " + playerScore + " - " + computerScore)
     }
     else if (playerScore < computerScore){
-        console.log("You Lose! " + playerScore + " - " + computerScore)
+        console.log("You Lost the Game! " + playerScore + " - " + computerScore)
     }
     else console.log("Game Tied! " + playerScore + " - " + computerScore)
 }
