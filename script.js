@@ -64,7 +64,7 @@ function getComputerChoice(){
     //console.log("getComputerChoice function started")
     const choice = ["rock", "paper", "scissors"];
     let computerChoice = Math.floor(Math.random() * choice.length);
-    console.log("Computer picked " + choice[computerChoice]);
+    console.log("I picked " + choice[computerChoice]);
     return choice[computerChoice];
     
 }
