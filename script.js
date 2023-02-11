@@ -50,7 +50,7 @@ function playRound(playerChoice, computerChoice)
 
     else 
         {
-        roundResult = "You lose this round! " + playerSelection + " is beaten by " + computerSelection;
+        roundResult = "You lose this round, " + playerSelection + " is beaten by " + computerSelection;
         computerScore++;
         }
 
