@@ -5,18 +5,21 @@
 let playerScore = 0
 let computerScore = 0
 
-// function for computer choice
-function getComputerChoice(){
-    const computerChoice = ["rock", "paper", "scissors"];
-    let choice = Math.floor(Math.random() * computerChoice.length);
-    return computerChoice[choice];
-}
+//console.log(playRound(playerSelection, computerSelection));
 
-// function for player choice
-function getPlayerChoice(){
-    let input = prompt("Enter 'Rock', 'Paper', or 'Scissors'");
-    let playerChoice = input.toLowerCase();
-    return playerChoice;
+//play 5 rounds
+function game(){
+    for (let i=0; i < 5; i++){
+        playRound();
+        console.log(roundResult);
+    }
+    if (playerScore > computerScore){
+        console.log("You Win! " + playerScore + " - " + computerScore)
+    }
+    else if (playerScore < computerScore){
+        console.log("You Lose! " + playerScore + " - " + computerScore)
+    }
+    else console.log("Game Tied! " + playerScore + " - " + computerScore)
 }
 
 const playerSelection = getPlayerChoice();
@@ -41,20 +44,18 @@ function playRound(playerSelection, computerSelection){
     return roundResult;
 }
 
+// function for computer choice
+function getComputerChoice(){
+    const computerChoice = ["rock", "paper", "scissors"];
+    let choice = Math.floor(Math.random() * computerChoice.length);
+    return computerChoice[choice];
+    console.log("Computer picked " + computerChoice);
+}
 
-//console.log(playRound(playerSelection, computerSelection));
-
-//play 5 rounds
-function game(){
-    for (let i=0; i < 5; i++){
-        playRound();
-        console.log(roundResult);
-    }
-    if (playerScore > computerScore){
-        console.log("You Win! " + playerScore + " - " + computerScore)
-    }
-    else if (playerScore < computerScore){
-        console.log("You Lose! " + playerScore + " - " + computerScore)
-    }
-    else console.log("Game Tied! " + playerScore + " - " + computerScore)
+// function for player choice
+function getPlayerChoice(){
+    let input = prompt("Enter 'Rock', 'Paper', or 'Scissors'");
+    let playerChoice = input.toLowerCase();
+    return playerChoice;
+    console.log("You picked " + playerChoice);
 }
